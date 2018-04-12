@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOVER</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/myjs.js"></script>
+        <style>
+        .box{
+            width:300px;
+            height:300px;
+            margin:200px auto;
+            background:lightblue;
+            border:1px solid red;
+            position:relative;
+            transition: width 5s linear 2s;
+        }
+        .object{
+            position:absolute;
+            top:50px;
+            left:100px;
+        }
+        .show{
+            display:block;
+        }
+        .hide{
+            display:none;
+        }
+        .box:hover{
+            background:lightpink;
+            width:600px;
+            
+        }
+        .box:hover > .object .show{
+            display:none;
+        }
+        .box:hover > .object .hide{
+            display:block;
+        }
+        #commentaire{
+            
+        }
+        .temoignage{
+            background:#8b8b8b;
+            position:relative;
+            padding:40px;
+            width:1200px;
+            margin:0 auto;
+            height:200px;
+        }
+        .prev{
+            position:absolute;
+            left:20px;
+            top:80px;
+        }
+        .next{
+            position:absolute;
+            right:20px;
+            top:80px;
+        }
+        .content{
+            padding:10px 50px;
+        }
+        .fade{
+            animation-name:fade;
+            -webkit-animation-name:fade;
+            animation-duration:2.5s;
+            -webkit-animation-duration:2.5s;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div class="box">
+                <div class="object">
+                    <img src="pin.png" class="show" alt="">
+                    <img src="google.png" class="hide" alt="">
+                </div>
+
+            </div>
+        </header>
+        <!-- FIN HEADER -->
+
+       
+
+       <!-- *************************************************************************************************************************************************** -->
+
+           
+                    <div class="temoignage">
+                        <div class="prev">
+                            <a onclick="plusDivs(-1, 'myslide')"><img src="http://www.beautysane.com/public/img/prev_white.svg" alt="Précédent"></a>
+                        </div>
+                        <div class="next">
+                            <a onclick="plusDivs(1, 'myslide')"><img src="http://www.beautysane.com/public/img/next_white.svg" alt="Suivant"></a>
+                        </div>
+                        <div class="content">
+                            <div class="col-xs-12 myslide fade" style="">
+                                <h1 style="text-align:center">This is Mrs Denise testimony on povert in mauritius.<br> She hopes it will end soon.</h1>
+                                <h3 style="text-align:right">Mrs Denise Claude</h3>
+                            </div>      
+                            <div class="col-xs-12 myslide fade" style="display: none">
+                                <h1 style="text-align:center">When you install Sass on the command line, <br>you'll be able to run the sass.</h1>
+                                <h3 style="text-align:right">Mr kevin Claude</h3>
+                            </div>   
+                            <div class="col-xs-12 myslide fade" style="display: none">
+                                <h1 style="text-align:center">Once it's all set up, go and play. <br>some resources to help you .</h1>
+                                <h3 style="text-align:right">Andrien Ravelolo</h3>
+                            </div>
+                        </div>
+                    </div>
+      
+            
+
+
+
+        
+       
+    </body>
+</html>
